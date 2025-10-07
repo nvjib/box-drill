@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  min-height: 100vh;
+}
+
+.left-section {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid blue;
+  text-align: center;
+}
+
+.form-container {
+  border: 3px dotted green;
+  max-width: 500px;
+  width: 100%;
+  padding: 10px;
+}
+
+header, form {
+  border: 3px solid blue;
+  margin: 10px 0;   
+}
+
+.input-group {
+  border: 1px solid green;
+  margin: 10px 0;
+  width: 100%;
+}
+
+input {
+  width: 100%;
+}
+
+.input-group input {
+  padding: 4px 10px;
+}
+
+.remember-forgot {
+  border: 3px dotted green;
+  padding: 4px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+}
+
+.login-button {
+  margin: 10px 0;
+  width: 100%;
+  border: 1px solid green;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.divider {
+  margin-bottom: 20px;
+}
+
+.sso-button {
+  margin: 10px 0;
+}
+
+.right-section {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid green;
+  text-align: center;
+}
