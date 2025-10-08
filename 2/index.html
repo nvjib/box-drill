@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Checkout</title>
+</head>
+<body>
+    <header>
+        <div class="logo"></div>
+        <h1>Upgrade to Plus</h1>
+        <p>Do more with unlimited blocks, files, automations & integrations</p>
+    </header>
+
+    <form>
+        <div class="right-section">
+            <div class="billed-to">
+                <h3>Billed to</h3>
+                <div>
+                    <input type="text" placeholder="Name">
+                    <input type="text" placeholder="Business name (optional)">
+                </div>
+
+            </div>
+
+            <div class="payment-details">
+                <h3>Payment</h3>
+                <div class="payment-option">
+                    <button>Card</button>
+                    <button>Bank</button>
+                </div>
+
+                <input type="text" placeholder="Card number">
+
+                <div class="expiry-cvc">
+                    <input type="text" placeholder="Expiration">
+                    <input type="text" placeholder="CVC">
+                </div>
+
+                <select>
+                    <!-- countries -->
+                    <option>United States</option>
+                    <option>United Kingdom</option>
+                </select>
+
+                <input type="text" placeholder="ZIP">
+
+                <p>By providing your card information, you allow Notion Labs, Inc. To charge your card for future payments in accordance with their terms</p>
+            </div>
+        </div>
+
+        <div class="left-section">
+            <div class="billing-options">
+                <h3>Billing options</h3>
+                <div class="monthly">
+                    <input type="radio">
+                    <label>Pay Monthly</label>
+                </div>
+
+                <div class="annually">
+                    <input type="radio">
+                    <label>Pay annually</label>     
+                </div>
+            </div>
+
+            <div class="add-ons">
+                <h3>Add ons</h3>
+
+                <div class="notion-ai">
+                    <input type="checkbox">
+                    <label>Notion AI</label>
+                </div>
+            </div>
+
+            <div class="pricing-details">
+                <div class="price">
+                    <p>$20 / month</p>
+                    <select>
+                        <option>Details</option>
+                    </select>
+                </div>
+
+                <button class="upgrade-btn">Upgrade to Plus</button>
+
+                <p>By continuing, you agree to the <a href="">Notion Terms and Conditions.</a></p>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
