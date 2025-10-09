@@ -4,83 +4,248 @@
     box-sizing: border-box;
 }
 
+:root {
+    /* space sizes */
+    --space-xs: 4px;
+    --space-sm: 8px;
+    --space-md: 16px;
+    --space-lg: 24px;
+    --space-xl: 32px;
+    --space-2xl: 40px;
+    --space-3xl: 48px;
+    --space-4xl: 54px;
+
+    /* text sizes */
+    --text-xs: 4px;
+    --text-sm: 8px;
+    --text-md: 16px;
+    --text-lg: 24px;
+    --text-xl: 32px;
+    --text-2xl: 40px;
+    --text-3xl: 48px;
+    --text-4xl: 54px;
+
+    /* font weight */
+    --font-thin: 100;
+    --font-extra-light: 200;
+    --font-light: 300;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+    --font-extra-bold: 800;
+
+    /* colors */
+    --border-color: #e0e0e0;
+    --text-muted: #848484;
+    --primary-color: #2383e2;
+
+    /* border radius size */
+    --border-radius: 6px;
+
+    /* font */
+    --font-main: -apple-system;
+}
+
 body {
-    border: 3px solid blue;
-}
-
-header, form {
-    border: 3px solid red;
-}
-
-form {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: var(--font-main);
 }
 
-.right-section, .left-section {
+/* general styling */
+h3 {
+    font-size: var(--text-md);
+    color: var(--text-muted);
+    font-weight: var(--font-semi-bold);
+    margin-bottom: var(--space-sm);
+}
+
+.input__group {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.input__field {
+    width: 100%;
+    padding: var(--space-md);
+    border-radius: var(--border-radius);
+    border: 1.5px solid var(--border-color);
+    outline: none;
+    font-size: var(--text-md);
+}
+
+/* main form */
+.checkout {
+    max-width: 1100px;
+    width: 100%;
+    border: 3px solid black;
+}
+
+/* checkout header */
+.checkout__header {
+    border: 3px solid red;
+    margin-bottom: var(--space-md);
+}
+
+.checkout__logo {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-color);
+    border-radius: var(--border-radius);
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-sm);
+}
+
+.checkout__title {
+    font-size: var(--text-xl);
+    font-weight: var(--font-bold);
+    margin-bottom: var(--space-sm);
+}
+
+.checkout__description {
+    font-size: var(--text-md);
+    font-weight: var(--font-regular);
+    color: var(--text-muted);
+}
+
+/* checkout form */
+.checkout__form {
+    border: 3px solid red;
+    display: flex;
+    gap: var(--space-xl);
+}
+
+.checkout__session {
     flex: 1;
 }
 
-input {
-    width: 100%;
+/* billed to */
+.billed__to {
+    border: 2px solid red;
+    margin-bottom: var(--space-md);
 }
 
-/* Billed to */
-.billed-to {
-    border: 3px solid blue;
+/* payment */
+.payment {
+    border: 2px solid red;
 }
 
-.billed-to input {
+.payment__section {
+    margin-bottom: var(--space-lg);
+}
+
+.payment__methods {
     display: flex;
+    gap: var(--space-sm);
+    margin-bottom: var(--space-sm);
 }
 
-/* Payment details */
-.payment-details {
-    border: 3px solid green;
-}
-
-.payment-option {
-    display: flex;
-}
-
-.payment-option button{
-    width: 100%;
-}
-
-.expiry-cvc {
-    display: flex;
-}
-
-.billing-options {
-    border: 3px solid orange;
-}
-
-.add-ons {
-    border: 3px solid aquamarine;
-}
-
-.pricing-details {
-    border: 3px solid blue;
-}
-
-/* Billing options */
-.monthly, .annually, .notion-ai {
+.payment__method {
+    flex: 1;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: var(--space-xs);
+    border: 1px solid var(--border-color);
+    padding: var(--space-md);
+    border-radius: var(--border-radius);
+    cursor: pointer;
 }
 
-input[type="checkbox"] {
-    width: 20px;
-    height: 20px;
+.payment__method-label {
+    font-size: var(--text-ld);
+    font-weight: var(--font-semi-bold);
 }
 
-/* Pricing details */
-.price {
+.payment__info {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: var(--space-sm);
 }
 
-.upgrade-btn {
-    width: 100%;
+.payment__expiry-cvc {
+    display: flex;
+    gap: var(--space-sm);
+}
+
+.payment__disclaimer {
+    font-size: var(--text-md);
+    font-weight: var(--font-regular);
+    color: var(--text-muted);
+    line-height: 20px;
+}
+
+/* right side */
+.right__section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+/* billing options */
+.billing__options {
+    border: 2px solid red;
+}
+
+.billing__option {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    padding: var(--space-md);
+    border: 1.5px solid var(--border-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+}
+
+.billing__option__info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.billing__title {
+    font-weight: var(--font-semi-bold);
+}
+
+.billing__price {
+    color: var(--text-muted);
+}
+
+/* add ons */
+.add-ons {
+    border: 2px solid red;
+}
+
+.add-on {
+    display: flex;
+    align-items: center;
+    border: 1.5px solid var(--border-color);
+    border-radius: var(--border-radius);
+    gap: var(--space-md);
+    padding: var(--space-md);
+}
+
+.add__ons__info {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+}
+
+.addon__title {
+    font-weight: var(--font-semi-bold);
+}
+
+.addon__price {
+    color: #484848;
+}
+
+.addon__description {
+    color: var(--text-muted);
 }
