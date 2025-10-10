@@ -74,21 +74,24 @@ h3 {
     padding: var(--space-md);
     border-radius: var(--border-radius);
     border: 1.5px solid var(--border-color);
+    background: #f8f8f8;
     outline: none;
     font-size: var(--text-md);
+}
+
+.input__field:focus {
+    outline: 1.5px solid var(--primary-color);
 }
 
 /* main form */
 .checkout {
     max-width: 1100px;
     width: 100%;
-    border: 3px solid black;
 }
 
 /* checkout header */
 .checkout__header {
-    border: 3px solid red;
-    margin-bottom: var(--space-md);
+    margin-bottom: var(--space-2xl);
 }
 
 .checkout__logo {
@@ -117,9 +120,8 @@ h3 {
 
 /* checkout form */
 .checkout__form {
-    border: 3px solid red;
     display: flex;
-    gap: var(--space-xl);
+    gap: var(--space-2xl);
 }
 
 .checkout__session {
@@ -128,17 +130,12 @@ h3 {
 
 /* billed to */
 .billed__to {
-    border: 2px solid red;
-    margin-bottom: var(--space-md);
+    margin-bottom: var(--space-2xl);
 }
 
 /* payment */
-.payment {
-    border: 2px solid red;
-}
-
 .payment__section {
-    margin-bottom: var(--space-lg);
+    margin-bottom: var(--space-md);
 }
 
 .payment__methods {
@@ -147,14 +144,21 @@ h3 {
     margin-bottom: var(--space-sm);
 }
 
+.card, .bank {
+    width: 25px;
+    height: 25px;
+    color: black;
+}
+
 .payment__method {
     flex: 1;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     gap: var(--space-xs);
     border: 1px solid var(--border-color);
     padding: var(--space-md);
     border-radius: var(--border-radius);
+    background: none;
     cursor: pointer;
 }
 
@@ -190,10 +194,6 @@ h3 {
 }
 
 /* billing options */
-.billing__options {
-    border: 2px solid red;
-}
-
 .billing__option {
     display: flex;
     align-items: center;
@@ -203,6 +203,7 @@ h3 {
     border-radius: var(--border-radius);
     cursor: pointer;
 }
+
 
 .billing__option__info {
     display: flex;
@@ -219,10 +220,6 @@ h3 {
 }
 
 /* add ons */
-.add-ons {
-    border: 2px solid red;
-}
-
 .add-on {
     display: flex;
     align-items: center;
@@ -230,6 +227,7 @@ h3 {
     border-radius: var(--border-radius);
     gap: var(--space-md);
     padding: var(--space-md);
+    margin-bottom: var(--space-sm);
 }
 
 .add__ons__info {
@@ -249,3 +247,44 @@ h3 {
 .addon__description {
     color: var(--text-muted);
 }
+
+/* pricing details */
+.pricing__details-plan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-lg);
+}
+
+.pricing__details-plan p {
+    font-size: var(--text-lg);
+    font-weight: var(--font-semi-bold);
+}
+
+.upgrade-btn {
+    width: 100%;
+    padding: var(--space-md);
+    border-radius: var(--border-radius);
+    background-color: var(--primary-color);
+    color: white;
+    font-size: var(--text-md);
+    border: none;
+    font-weight: var(--font-semi-bold);
+    margin-bottom: var(--space-md);
+    cursor: pointer;
+}
+
+.upgrade-btn:hover {
+    background-color: #1f6bc4;
+}
+
+.pricing__details-terms {
+    color: var(--text-muted);
+    font-size: var(--text-md);
+}
+
+.pricing__details-terms a {
+    text-decoration: underline;
+    color: var(--text-muted);
+}
+
